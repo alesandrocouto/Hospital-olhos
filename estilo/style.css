@@ -6,6 +6,7 @@
     padding: 15px;
     display: grid;
     gap: 5px;
+    align-items: center;
     grid-template-areas: 
         'header header header'
         'sidebar sidebar content'
@@ -35,3 +36,8 @@
 #footer {
     grid-area: footer;
 }
+
+/* #img2 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+} */
