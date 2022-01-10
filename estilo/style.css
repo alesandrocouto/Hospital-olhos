@@ -1,9 +1,19 @@
+@charset "UTF-8";
 
+:root {
+    --cor0: #00E1DE;
+
+    --fonte-padrao: Arial, verdana, Helvetica, sans-serif;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
 
 .container {
     background-color: #333;
-    border: 3px solid red;
-    padding: 15px;
+    padding: 5px;
     display: grid;
     gap: 5px;
     align-items: center;
@@ -14,57 +24,83 @@
 }
 
 .container div {
-    background-color: #ccc;
+    background-color: white;
     padding: 20px;
-    border: 1px solid blue;
+    
 }
 .cabecalho {
     text-align: center;
     padding: 25px;
     display: grid;
-    grid-template-columns: 1fr 900px 1fr;
+    grid-template-areas: 'img1 link img2';
+    grid-template-columns: auto auto auto;
+    align-items: center;
 }
 
 #img1 {
     width: 200px;
-    margin-top: 40px;
-    padding-top: 40px;
+    margin: -50px 0px 20px 0px;
+    padding: 10px 60px 10px 5px;
     
     border: 2px solid black;
 }
 
 #link {
-    padding: 70px 5px 5px 5px;
+    padding: 10px 5px 5px 5px;
     margin: 30px 5px 60px 5px;
-    height: 60px;
-    background-color: yellow;
+    height: 80px;
+    width: 800px;
     border: 2px solid black;
-    
+}
+
+#link ul {
+    display: flex;
+    justify-content: end;
+    list-style: none;
+    gap: 30px;
+}
+
+#link ul li {
+    padding-right: 30px;
+    border-right: 2px solid #00E1DE;
+} 
+
+#link ul li a {
+    text-decoration: none;
+}
+
+#link ul li:last-child {
+    border: 0;
 }
 
 #img2 {
     width: 100px;
-    margin-right: 30px;
+    margin-top: -60px;
     text-align: center;
+    border: 2px solid black;
 }
 
 .a {
+    color: #00E1DE;
+    font-size: 0.9em;
+    font-weight: bolder;
+    
+}
+
+/*.a {
     text-decoration: none;
     padding: 15px;
     width: 5px;
     height: 200px;
     background-color: blue;
     color: white;
-}
+} */ 
 
- #quebra {
-    background-color: red;
-    color: white;
+ #quebra {  
     text-decoration: none;
-    padding: 15px;
+    padding: 20px 15px 20px 15px;
     margin-right: 5px;
-    height: 60px;
-    
+    height: 60px;  
 }
 
 #header {
