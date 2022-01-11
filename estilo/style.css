@@ -11,6 +11,7 @@
     padding: 0px;
 }
 
+
 .container {
     background-color: #333;
     padding: 5px;
@@ -40,9 +41,24 @@
 #img1 {
     width: 200px;
     margin: -50px 0px 20px 0px;
-    padding: 10px 60px 10px 5px;
-    
+    padding: 10px 60px 10px 5px;  
     border: 2px solid black;
+}
+
+button {
+    background-color: transparent;
+    border: solid;
+    color: #00E1DE;
+    font-size: 40px;
+    padding: 10px 0px 10px 0px;
+    margin-top: -30px;
+    display: none;
+}
+
+button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    background-color: rgba(128, 128, 128, 0.137);
 }
 
 #link {
@@ -123,7 +139,9 @@
     grid-area: footer;
 }
 
-/* #img2 {
-    grid-column-start: 1;
-    grid-column-end: 4;
-} */
+@media only screen and (max-width:1150px) {
+    .container {
+        grid-template-areas: "header" "link" "sidebar" "content" "footer";
+        grid-template-columns: 1fr;
+    }
+}
