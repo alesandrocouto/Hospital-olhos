@@ -1,48 +1,77 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@900&display=swap');
+
 :root {
     --cor0: #00E1DE;
 
     --fonte-padrao: Arial, verdana, Helvetica, sans-serif;
 }
 
-* {
+ * {
     margin: 0px;
     padding: 0px;
-}
+} */
 
-
-.container {
-    background-color: #333;
-    padding: 5px;
+/*main {
+    margin: 0px;
     display: grid;
-    gap: 5px;
-    align-items: center;
+    height: 60vh;
+    grid-template-areas: 
+        "sidebar sidebar"
+        "sidebar sidebar"
+        "sidebar content";
+} */
+body {
+    
+    height: 100vh;
+    display: grid;
     grid-template-areas: 
         'header header header'
-        'sidebar sidebar content'
+        'content content content'
         'footer footer footer';
+        
 }
 
+header {
+    padding: 40px 20px ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+    margin: auto;
+    min-width: 320px;
+    max-width: 1345px;
+    padding: 5px 5px 5px 0px;
+    /*display: grid; */
+    gap: 5px;
+    align-items: center;
+    
+} 
+
 .container div {
-    background-color: white;
-    padding: 20px;
+    background-color: ;
+    padding: 10px 25px;
     
 }
 .cabecalho {
-    text-align: center;
-    padding: 25px;
+    padding: 25px 20px;
+    margin: -15px -30px 0px -25px;
     display: grid;
     grid-template-areas: 'img1 link img2';
     grid-template-columns: auto auto auto;
     align-items: center;
+    background-color: white;
 }
 
 #img1 {
     width: 200px;
-    margin: -50px 0px 20px 0px;
+    margin: -30px 0px 20px 0px;
     padding: 10px 60px 10px 5px;  
-    border: 2px solid black;
 }
 
 button {
@@ -62,11 +91,11 @@ button:hover {
 }
 
 #link {
+    position: relative;
     padding: 10px 5px 5px 5px;
-    margin: 30px 5px 60px 5px;
+    margin: 40px 5px 30px 5px;
     height: 80px;
     width: 800px;
-    border: 2px solid black;
 }
 
 #link ul {
@@ -91,9 +120,8 @@ button:hover {
 
 #img2 {
     width: 100px;
-    margin-top: -60px;
+    margin-top: -50px;
     text-align: center;
-    border: 2px solid black;
 }
 
 .a {
@@ -121,27 +149,234 @@ button:hover {
 
 #header {
     grid-area: header;
-    height: 30vh;
+    height: 24vh;
     text-align: center;
 }
 
-#sidebar {
-    grid-area: sidebar;
-    height: 55vh;
+.conteudo {
+    display: grid;
+    grid-template-columns: 1000px auto;
+}
+
+/*#banner {
+    width: 50vw;
+    
+    background-color: var(--cor0);
+} */
+
+#med1 {
+    width: 710px;
+    margin-top:-20px;
+    margin-left: -50px;
+}
+
+#logo2 {
+    position: absolute;
+    left: 800px;
+    margin-top: 90px;
+    
+}
+
+#lema {
+    color: white;
+    position: absolute;
+    left: 820px;
+    margin-top: -310px;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 4em;
+    line-height: 0.9em;
+    text-shadow: 1px 1px 1px #00E1DE;
+    
+} 
+
+.clic_aqui {
+    width: 900px;
+    height: 130px;
+    position: relative;
+    margin-top: 10px;
+    margin-left: 180px;
+    padding-top: -30px;
+    padding-bottom: 100px;
+}
+
+
+#aqui {
+    position: relative;
+    text-align: center;
+    font-family: 'Catamaran', sans-serif;
+    font-size: 3em;
+    margin-top: -40px;  
+    padding-top: 20px;
+    background-color: #2AD2C5;
+    color: white;
+    border-radius: 120px;
+    width: 900px;
+    height: 80px;
+}
+
+#fale_conosco {
+    position: relative;
+    text-align: right;
+    font-family: 'Catamaran', sans-serif;
+    font-size: 1.2em;
+    line-height: 1.2em;
+    margin-top: -70px;
+    margin-right: 100px;
+    color: white;
+}
+
+#icone {
+    position: relative;
+    left: -290px;
+    margin-top: -25px;
+}
+
+#clique {
+    position: absolute;
+    
+    margin-top: -125px;
+    margin-right: 250px;
+    margin-left: 260px;
+}
+
+#img_doutor {
+    width: 550px;
+    height: 500px;
+    padding-top: 100px;
+    padding-left: 50px;
+    background-color: ;
+}
+
+#sobre {
+    position: absolute;
+    padding-right: 100px;
+    margin-top: -400px;
+    margin-left: 630px;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.7em;
+    color: #00E1DE;
+    
+}
+
+.informacoes {
+    
+    position: relative;
+    width: 600px;
+    top: -400px;
+    margin-top: 28px;
+    margin-left: 630px; 
+    font-size: 14px;
+    color: #a5a5a5f5 ;
+    display: block;
+    margin-block-start: 2em;
+    font-family: "Helvetica Display Now", Sans-serif;
+    line-height: 20px;
 }
 
 #content {
     grid-area: content;
-    height: 55vh;
+    height: 85.5vh;
+    background-color: var(--cor0);
+    margin: 40px -5px -45px 0px;
 }
 
 #footer {
     grid-area: footer;
+    position: absolute;
+    height: 25vh;
+    width: 1298.5px;
+    margin-top: 980px;
+    border-top: 4px solid #DFDFDF;
+    color: #00E1DE;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 9px;
+    font-weight: bolder;
+    
+    
 }
 
-@media only screen and (max-width:1150px) {
-    .container {
-        grid-template-areas: "header" "link" "sidebar" "content" "footer";
+#encontre_nos {
+    margin-top: -75px;
+    margin-left: 190px;
+    width: 300px;
+    border: 3px  red;
+
+}
+
+#img_localizacao{
+    margin-top: 70px;
+    margin-left: 100px;
+}
+
+#endereco {
+    margin-top: 20px;
+    margin-left: 190px;
+    margin-right: 910px;
+    font-family: "Helvetica Display Now", Sans-serif;
+    font-size: 12px;
+    color: #a5a5a5f5;
+}
+
+#horario {
+    margin-top: -40px;
+    margin-left: 380px;
+    margin-right: 600px;
+    font-size: 12px;
+    font-family: "Helvetica Display Now", Sans-serif;
+    color: #a5a5a5f5;
+}
+
+#fone {
+    margin-left: 60px;
+    color: #a5a5a5f5;
+}
+
+#subtitulo {
+    margin-top: -80px;
+    margin-left: 690px;
+    width: 200px;
+}
+
+#responsavel {
+    margin-top: 22px;
+    margin-right: 300px;
+    margin-left: 690px;
+    width: 150px;
+    font-size: 12px;
+    font-family: "Helvetica Display Now", Sans-serif;
+    color: #a5a5a5f5;
+}
+
+#final {
+    margin-top: -42px;
+    margin-left: 870px;
+    width: 250px;
+    font-size: 12px;
+    font-family: "Helvetica Display Now", Sans-serif;
+    color: #a5a5a5f5;
+}
+
+#ico_face {
+    position: absolute;
+    margin-top: -30px;
+    margin-left: 1130px;
+}
+
+#ico_insta {
+    position: absolute;
+    margin-top: -30px;
+    margin-left: 1170px;
+}
+
+#ico_email {
+    position: absolute;
+    margin-top: -33px;
+    margin-left: 1210px;
+}
+
+/*@media only screen and (max-width:1150px) {
+    body {
+        grid-template-areas: "header" "link" "content" "footer";
         grid-template-columns: 1fr;
     }
-}
+} */
